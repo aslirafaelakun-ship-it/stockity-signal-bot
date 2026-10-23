@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stockity Signal Bot</title>
+<style>
+body {
+  background: #0b1120;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.card {
+  background: #182337;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 16px;
+}
+h1 { color: #67e8f9; }
+button {
+  background: #0891b2;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+}
+.signal {
+  color: #facc15;
+  font-size: 30px;
+  font-weight: bold;
+}
+p { line-height: 1.5; }
+</style>
+</head>
+<body>
+<h1>Stockity Signal Bot</h1>
+<p>Forex EUR/USD | Timeframe 1 menit</p>
+
+<div class="card">
+  <h2>Status aplikasi</h2>
+  <p id="status">Aplikasi berhasil dibuka.</p>
+  <button onclick="cek()">Tes aplikasi</button>
+</div>
+
+<div class="card">
+  <h2>Sinyal</h2>
+  <div class="signal" id="signal">WAIT</div>
+  <p id="alasan">
+    Menunggu koneksi sumber data harga.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Informasi</h2>
+  <p>Instrumen: EUR/USD</p>
+  <p>Timeframe: 1 menit</p>
+  <p>Mode: Analisis sinyal saja</p>
+  <p>Eksekusi order otomatis: Tidak aktif</p>
+</div>
+
+<script>
+function cek() {
+  document.getElementById("status").textContent =
+    "Aplikasi berjalan dengan baik.";
+
+  document.getElementById("signal").textContent =
+    "WAIT";
+
+  document.getElementById("alasan").textContent =
+    "Ini masih versi awal. Data harga live belum dihubungkan.";
+}
+</script>
+</body>
+</html>
